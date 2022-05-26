@@ -1,10 +1,14 @@
+import "./App.css";
+import Header from "./Components/Header";
+import TaskList from "./Components/TaskList";
 
-import './App.css';
+const todoList = ["clean room", "go to the gym"];
 
 function App() {
   return (
     <div className="App">
-      hello
+      <Header />
+      <TaskList todoList={todoList} />
     </div>
   );
 }

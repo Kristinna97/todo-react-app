@@ -6,7 +6,7 @@ function TaskAdder({ setTasks }) {
     event.preventDefault();
 
     setTasks((currentTasks) => {
-      return [...currentTasks, {name: newTask ,completed: false}];
+      return [ {name: newTask ,completed: false}, ...currentTasks];
     });
     setNewTask("");
   };

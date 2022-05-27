@@ -2,7 +2,7 @@ import { useState } from "react";
 import TaskAdder from "./TaskAdder";
 function TaskList() {
   const [tasks, setTasks] = useState([
-    { name: "clean house", completed: false },
+    { name: "brush teets", completed: false },
     { name: "clean room", completed: false },
   ]);
 
@@ -30,6 +30,7 @@ function TaskList() {
   }
   return (
     <>
+    <div className="main">
       <ul>
         {tasks.map((task) => {
           return (
@@ -56,6 +57,7 @@ function TaskList() {
           );
         })}
       </ul>
+      </div>
       <TaskAdder setTasks={setTasks} />
     </>
   );

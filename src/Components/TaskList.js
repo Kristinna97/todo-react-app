@@ -9,8 +9,11 @@ function TaskList() {
     <ul>
       {tasks.map((task) => {
         return <li key={task}>
+          <div>
           <input type="checkbox"  ></input>
-          {task} <button>Delete</button></li>;
+          {task} 
+          </div>
+          <button id='delete'>Delete</button></li>;
       })}
     </ul>
     <TaskAdder setTasks = {setTasks}/>

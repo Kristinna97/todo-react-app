@@ -6,7 +6,7 @@ function TaskAdder({ setTasks }) {
     event.preventDefault();
 
     setTasks((currentTasks) => {
-      return [...currentTasks, newTask];
+      return [...currentTasks, {name: newTask ,completed: false}];
     });
     setNewTask("");
   };
@@ -19,8 +19,9 @@ function TaskAdder({ setTasks }) {
         placeholder="Add new task"
         value={newTask}
         onChange={(event) => setNewTask(event.target.value)}
+        required
       ></input>
-      <button type="submit">Add Task</button>
+      <button type="submit" id="add">Add Task</button>
     </form>
   );
 }

@@ -1,10 +1,20 @@
-function TaskList({ todoList }) {
+import { useState } from 'react'
+import TaskAdder from "./TaskAdder";
+function TaskList() {
+
+  const [tasks, setTasks] = useState( ["clean room", "go to the gym", 'Hi'])
+
   return (
+    <>
     <ul>
-      {todoList.map((task) => {
-        return <li key={task}>{task}</li>;
+      {tasks.map((task) => {
+        return <li key={task}>
+          <input type="checkbox"  ></input>
+          {task} <button>Delete</button></li>;
       })}
     </ul>
+    <TaskAdder setTasks = {setTasks}/>
+    </>
   );
 }
 

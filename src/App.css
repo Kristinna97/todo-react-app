@@ -1,32 +1,35 @@
-body,html {
+body,
+html {
   height: 100%;
 }
 #root {
-  background-image:linear-gradient(rgba(46, 45, 45, 0.3), rgba(88, 88, 88, 0.2)), url("https://www.collinsdictionary.com/images/full/sunrise_527304829_1000.jpg");
+  background-image: linear-gradient(
+      rgba(46, 45, 45, 0.3),
+      rgba(88, 88, 88, 0.2)
+    ),
+    url("https://www.collinsdictionary.com/images/full/sunrise_527304829_1000.jpg");
   background-size: cover;
-  background-color:burlywood;
+  background-color: burlywood;
   height: 100%;
-
- 
-
 }
 .App {
   text-align: center;
   margin: 0% 2% 15% 2%;
   padding-top: 3%;
-  
 }
 
 h1 {
   letter-spacing: 5px;
   text-transform: uppercase;
-  font-size: 35px;
+  font-size: 40px;
+  color: #f8eeee;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
 }
 
 ul {
- 
   list-style-type: none;
-  margin: 2% 8%;
+  margin: 0% 8%;
   padding: 5px 0;
   height: 70%;
   display: block;
@@ -34,7 +37,7 @@ ul {
 
 li {
   box-shadow: 2px 10px 5px -10px rgba(58, 57, 57, 0.69);
-  margin: 2% 15%;
+  margin: 2% 20%;
   display: flex;
   justify-content: space-between;
   text-transform: capitalize;
@@ -42,7 +45,6 @@ li {
   background-color: #f8eeee;
   height: 13%;
   border-radius: 8px;
-
 }
 
 li > input {
@@ -64,10 +66,10 @@ li > input {
 }
 
 form {
-  padding-bottom: 10px;
+  padding-top: 3%;
   display: flex;
   justify-content: end;
-  margin-right: 20%;
+  margin-right: 25%;
 }
 form > input {
   height: 35px;
@@ -86,16 +88,16 @@ form > input {
   color: white;
 }
 
-button, .checkbox {
+button,
+.checkbox {
   cursor: pointer;
 }
 
-label{
+label {
   font-size: 18px;
   color: black;
 }
 
 .main {
   height: 400px;
-  
 }

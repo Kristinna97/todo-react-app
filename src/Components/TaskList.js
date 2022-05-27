@@ -2,7 +2,7 @@ import { useState } from "react";
 import TaskAdder from "./TaskAdder";
 function TaskList() {
   const [tasks, setTasks] = useState([
-    { name: "brush teets", completed: false },
+    { name: "brush teeth", completed: false },
     { name: "clean room", completed: false },
   ]);
 

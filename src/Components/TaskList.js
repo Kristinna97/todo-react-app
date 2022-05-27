@@ -30,6 +30,7 @@ function TaskList() {
   }
   return (
     <>
+     <TaskAdder setTasks={setTasks} />
     <div className="main">
       <ul>
         {tasks.map((task) => {
@@ -58,7 +59,7 @@ function TaskList() {
         })}
       </ul>
       </div>
-      <TaskAdder setTasks={setTasks} />
+     
     </>
   );
 }

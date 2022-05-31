@@ -1,6 +1,7 @@
 body,
 html {
   height: 100%;
+  overflow: hidden;
 }
 #root {
   background-image: linear-gradient(
@@ -25,6 +26,7 @@ h1 {
   color: #f8eeee;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
+  margin-bottom: 5px;
 }
 
 ul {
@@ -37,13 +39,13 @@ ul {
 
 li {
   box-shadow: 2px 10px 5px -10px rgba(58, 57, 57, 0.69);
-  margin: 2% 20%;
+  margin: 1% 20%;
   display: flex;
   justify-content: space-between;
   text-transform: capitalize;
   letter-spacing: 1px;
   background-color: #f8eeee;
-  height: 13%;
+  height: 11%;
   border-radius: 8px;
 }
 
@@ -100,4 +102,16 @@ label {
 
 .main {
   height: 400px;
+}
+
+.notification{
+  display: none;
+  color: #141414;
+  background-color: rgb(243, 243, 243);
+  margin:0% 25%;
+  border-radius: 8px;
+  padding: 4px;
+  border: 2px solid rgb(116, 112, 112);
+  letter-spacing: 0.5px;
+  
 }

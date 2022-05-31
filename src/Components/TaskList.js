@@ -11,16 +11,20 @@ function TaskList() {
     setTasks(newTasks);
   };
 
-  const toggleCompleted = () => {
+  const toggleCompleted = (element) => {
     setTasks((currentTasks) => {
       return currentTasks.map((task) => {
-        return { ...task, completed: !task.completed };
+        if (task.name === element.name) {
+          return { ...task, completed: !task.completed };
+        } else {
+          return { ...task, completed: task.completed };
+        }
       });
     });
+  
   };
 
   function toggleLineThrough(element) {
-    toggleCompleted();
     if (!element.completed) {
       document.getElementById(element.name).style.textDecoration =
         "line-through";
@@ -30,36 +34,36 @@ function TaskList() {
   }
   return (
     <>
-     <TaskAdder setTasks={setTasks} />
-    <div className="main">
-      <ul>
-        {tasks.map((task) => {
-          return (
-            <li key={task.name}>
-              <div>
-                <input
-                  type="checkbox"
+      <TaskAdder setTasks={setTasks} />
+      <div className="main">
+        <ul>
+          {tasks.map((task) => {
+            return (
+              <li key={task.name}>
+                <div>
+                  <input
+                    type="checkbox"
+                    onClick={() => {
+                      toggleCompleted(task);
+                      toggleLineThrough(task);
+                    }}
+                    className="check"
+                  ></input>
+                  <label id={task.name}> {task.name}</label>
+                </div>
+                <button
+                  id="delete"
                   onClick={() => {
-                    toggleLineThrough(task);
+                    deleteElement(task.name);
                   }}
-                  className="check"
-                ></input>
-                <label id={task.name}> {task.name}</label>
-              </div>
-              <button
-                id="delete"
-                onClick={() => {
-                  deleteElement(task.name);
-                }}
-              >
-                Delete
-              </button>
-            </li>
-          );
-        })}
-      </ul>
+                >
+                  Delete
+                </button>
+              </li>
+            );
+          })}
+        </ul>
       </div>
-     
     </>
   );
 }

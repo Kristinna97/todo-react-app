@@ -9,6 +9,10 @@ function TaskList() {
   const deleteElement = (taskDeleted) => {
     const newTasks = tasks.filter((task) => task.name !== taskDeleted);
     setTasks(newTasks);
+    if(tasks.length < 11) {
+      document.querySelector('.notification').style.display = 'none'
+      
+    }
   };
 
   const toggleCompleted = (element) => {
@@ -34,8 +38,9 @@ function TaskList() {
   }
   return (
     <>
-      <TaskAdder setTasks={setTasks} />
+      <TaskAdder setTasks={setTasks} tasks={tasks} />
       <div className="main">
+      <p className="notification">You can have only 10 tasks at a time. Please delete an existing one to be able to add new task</p>
         <ul>
           {tasks.map((task) => {
             return (
@@ -60,9 +65,11 @@ function TaskList() {
                   Delete
                 </button>
               </li>
+             
             );
           })}
         </ul>
+       
       </div>
     </>
   );

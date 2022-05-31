@@ -1,5 +1,5 @@
 import { useState } from "react";
-function TaskAdder({ setTasks }) {
+function TaskAdder({ setTasks, tasks }) {
     
   const [newTask, setNewTask] = useState("");
 
@@ -7,7 +7,13 @@ function TaskAdder({ setTasks }) {
     event.preventDefault();
 
     setTasks((currentTasks) => {
-      return [ {name: newTask ,completed: false}, ...currentTasks];
+      if(tasks.length === 10) {
+        document.querySelector('.notification').style.display = 'block'
+        return [...currentTasks];
+      }else{
+
+        return [ {name: newTask ,completed: false}, ...currentTasks];
+      }
     });
     setNewTask("");
   };

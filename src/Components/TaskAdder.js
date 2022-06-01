@@ -31,7 +31,7 @@ function TaskAdder({ setTasks, tasks }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label></label>
+      
       <input
         type="text"
         placeholder="Add new task"

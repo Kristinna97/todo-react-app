@@ -221,4 +221,14 @@ label {
   ul {
     margin: 0% 4%;
   }
+  .notification {
+
+    margin: 0% 15%;
+    border-radius: 8px;
+    padding: 4px;
+    border: 2px solid rgb(116, 112, 112);
+    letter-spacing: 0.5px;
+    font-size: 14px;
+  }
+  
 }
